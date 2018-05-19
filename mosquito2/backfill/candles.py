@@ -37,7 +37,7 @@ class Candles(Base):
                 candles = self.exchange.get_candles(pair,
                                                     epoch_from,
                                                     epoch_to,
-                                                    300)  # by default 5 minutes candles (minimum)
+                                                    1800)  # era:by default 5 minutes candles (minimum)
                 logger.info(' (got total candles: ' + str(len(candles)) + ')')
                 for candle in candles:
                     if candle['date'] == 0:
