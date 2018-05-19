@@ -102,13 +102,13 @@ class Exchange:
         """
         return self.exchange.get_balances()
 
-    def get_candles_df(self, currency_pair, epoch_start, epoch_end, period=300):
+    def get_candles_df(self, currency_pair, epoch_start, epoch_end, period=300): #era 300 by default
         """
         Returns candlestick chart data in pandas dataframe
         """
         return self.exchange.get_candles_df(currency_pair, epoch_start, epoch_end, period)
 
-    def get_candles(self, currency_pair, epoch_start, epoch_end, period=300):
+    def get_candles(self, currency_pair, epoch_start, epoch_end, period=300): #era 300 by default
         """
         Returns candlestick chart data
         """

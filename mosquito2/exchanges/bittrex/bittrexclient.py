@@ -67,7 +67,8 @@ class BittrexClient(Base):
         """
         currency_pair = currency_pair.replace('_', self.pair_delimiter)
         try:
-            res = self.bittrex.get_ticks(currency_pair, 'fiveMin')
+            # tickInterval must be in [“oneMin”, “fiveMin”, “thirtyMin”, “hour”, “day”].
+            res = self.bittrex.get_ticks(currency_pair, '“fiveMin”') # era “fiveMin”
         except gaierror as e:
             print(colored('\n! Got gaierror exception from Bittrex client. Details: ' + e, 'red'))
             return dict()

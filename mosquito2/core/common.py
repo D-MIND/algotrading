@@ -39,6 +39,7 @@ def parse_pairs(exchange, in_pairs):
     else:
         pairs = []
         parsed_pairs = in_pairs.replace(" ", "").split(',')
+        print('CIAOOOOOO', parsed_pairs)
         for in_pair in parsed_pairs:
             if '*' in in_pair:
                 prefix = in_pair.replace('*', '')
