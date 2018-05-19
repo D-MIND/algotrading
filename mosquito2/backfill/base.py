@@ -45,7 +45,8 @@ class Base(ABC):
         if backfill_all_pairs:
             return all_pairs
         elif pairs_list is not None:
-            tmp_pairs = [pairs_list]
+            # tmp_pairs = [pairs_list] # OLD
+            tmp_pairs = pairs_list.replace(" ", "").split(',') # MODIFIED
             pairs = []
             # Handle * suffix pairs
             for pair in tmp_pairs:
